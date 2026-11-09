@@ -360,15 +360,17 @@ h1, h2, h3, h4 {
 .section-title {
   font-size: clamp(1.8rem, 3.2vw, 2.6rem);
   line-height: 1.2;
-  color: var(--text-title);
+  color: #F4EFE7;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.7);
 }
 
 .section-sub {
-  color: var(--text-body);
+  color: #C9BFB5;
   font-size: 1.05rem;
   line-height: 1.6;
   margin-top: 0.75rem;
   max-width: 740px;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
 }
 
 /* â”€â”€ 4. NAVBAR â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
@@ -1429,30 +1431,33 @@ h1, h2, h3, h4 {
   font-family: var(--mono);
   font-size: 0.75rem;
   font-weight: 700;
-  color: var(--green);
-  background: var(--green-dim);
-  border: 1px solid var(--green-border);
+  color: #4ADE80 !important;
+  background: rgba(74, 222, 128, 0.14) !important;
+  border: 1px solid rgba(74, 222, 128, 0.35) !important;
   padding: 0.25rem 0.75rem;
   border-radius: var(--radius-xs);
   margin-bottom: 1.2rem;
   letter-spacing: 0.05em;
+  text-shadow: 0 0 10px rgba(74, 222, 128, 0.4);
 }
 
 .profile-quote {
   font-size: clamp(1.25rem, 2.2vw, 1.7rem);
   line-height: 1.35;
-  color: var(--text-title);
+  color: #F4EFE7 !important;
   margin-bottom: 1.4rem;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.7);
 }
 
 .profile-bio {
-  color: var(--text-muted);
+  color: #D6CEC3 !important;
   font-size: 1.02rem;
   line-height: 1.7;
   margin-bottom: 1.2rem;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
 }
 
-.profile-bio strong { color: var(--text-title); font-weight: 600; }
+.profile-bio strong { color: #FFFFFF !important; font-weight: 600; }
 
 .pfe-card {
   background: var(--glass-bg);
@@ -1487,13 +1492,14 @@ h1, h2, h3, h4 {
   background: rgba(15, 23, 42, 0.75);
   border: 1px solid var(--border-dim);
   border-radius: var(--radius-xs);
-  color: var(--text-muted);
+  color: #E2D9CE;
   backdrop-filter: blur(8px);
 }
+.badge strong { color: #FFFFFF; }
 .badge-accent {
-  background: var(--green-dim);
-  border-color: var(--green-border);
-  color: var(--green);
+  background: rgba(74, 222, 128, 0.15);
+  border-color: rgba(74, 222, 128, 0.35);
+  color: #4ADE80;
   font-weight: 600;
 }
 
