@@ -1,0 +1,1442 @@
+<!DOCTYPE html>
+<html lang="fr">
+<html lang="fr" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yosri Hamdouni · Cybersecurity Engineer &amp; Consultant | Command Center</title>
+  <meta name="description"
+    content="Portfolio cybersécurité de Yosri Hamdouni — Élève-ingénieur TEK-UP (3A), certifié ISO 27001 Lead Auditor, eCPPT v2, SC-200, Splunk & RHCE. Concepteur de CyberScore TN (ANCS) et Smart SOC. Expérience cinématique scroll-driven." />
+  <meta name="author" content="Yosri Hamdouni" />
+  <meta name="theme-color" content="#030712" />
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Yosri Hamdouni · Cybersecurity Engineer & Consultant" />
+  <meta property="og:description"
+    content="Comprendre l’attaque. Construire la défense. Audit des risques, Sécurité offensive & Cyberdéfense." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts: JetBrains Mono + Inter + Syne -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Inter:wght@300;400;500;600;700&family=Syne:wght@700;800&display=swap"
+    rel="stylesheet" />
+
+  <!-- GSAP 3.12+ & Plugins -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-lang="fr">
+
+  <!-- ═══════════════════════════════════════════
+       SCROLL-DRIVEN VIDEO BACKGROUND
+       Moves forward as the visitor scrolls down
+  ═══════════════════════════════════════════ -->
+  <div class="video-background-container" aria-hidden="true">
+    <div class="video-poster-fallback"></div>
+    <video id="bgVideo" class="bg-video-element" src="assets/website_smooth.mp4" poster="assets/poster.jpg" muted
+      playsinline preload="auto" loop></video>
+    <!-- Single Tunable Background Scrim -->
+    <div class="bg-scrim"></div>
+  </div>
+
+  <!-- Top Navigation Bar -->
+  <nav class="nav" id="nav">
+    <div class="nav-left">
+      <a href="#hero" class="nav-logo" aria-label="Accueil YH SecOps">
+        <span class="logo-bracket">[</span><span class="logo-text">YH/SECOPS</span><span class="logo-bracket">]</span>
+        <span class="status-indicator" title="Système opérationnel"></span>
+      </a>
+      <span class="nav-status-badge">PFE 2027 · 6 MOIS · Tunisie &amp; INT.</span>
+    </div>
+
+    <ul class="nav-links">
+      <li>
+        <a href="#hero" class="active">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"
+            style="vertical-align:-2px;margin-right:4px;">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            <polyline points="9 22 9 12 15 12 15 22"></polyline>
+          </svg><span data-i18n="nav.home">Accueil</span>
+        </a>
+      </li>
+      <li><a href="#profil" data-i18n="nav.profile">Profil</a></li>
+      <li><a href="#certs" data-i18n="nav.certs">Certifications</a></li>
+      <li><a href="#projets" data-i18n="nav.projects">Projets</a></li>
+      <li><a href="#parcours" data-i18n="nav.timeline">Parcours</a></li>
+      <li><a href="#arsenal" data-i18n="nav.skills">Arsenal</a></li>
+      <li><a href="#terminal" data-i18n="nav.terminal">Terminal</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Me contacter</a></li>
+    </ul>
+
+    <div class="nav-controls">
+      <!-- Dark/Light Theme Indicator Toggle -->
+      <button class="ctrl-btn theme-toggle" id="themeToggle" title="Mode d'affichage" aria-label="Mode sombre ou clair">
+        <span class="ctrl-icon theme-icon-sun">
+          <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+          </svg>
+        </span>
+        <span class="ctrl-icon theme-icon-moon" style="margin-left:2px;">
+          <svg viewBox="0 0 24 24" width="12" height="12" fill="currentColor">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </span>
+      </button>
+
+      <a href="cv-yosri-hamdouni.pdf" class="btn-cv-header" download title="Télécharger mon CV (PDF)">
+        <svg class="ctrl-svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor"
+          stroke-width="2">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        <span class="ctrl-txt">CV (PDF)</span>
+      </a>
+
+      <!-- Settings Dropdown (Gear) with SCROLL-SYNC & SFX -->
+      <div class="settings-menu-wrap" id="settingsWrap">
+        <button class="ctrl-btn settings-btn" id="settingsToggle" title="Paramètres"
+          aria-label="Paramètres d'affichage et audio" aria-haspopup="true" aria-expanded="false">
+          <svg class="ctrl-svg gear-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+            stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path
+              d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+            </path>
+          </svg>
+        </button>
+        <div class="settings-dropdown" id="settingsDropdown" role="menu" aria-label="Paramètres">
+          <div class="settings-dropdown-title" data-i18n="settings.title">CONFIGURATION</div>
+          <!-- Video Mode Toggle -->
+          <button class="settings-item-btn" id="videoModeToggle" role="menuitem" title="Mode de lecture vidéo">
+            <span class="ctrl-icon">
+              <svg class="ctrl-svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+              </svg>
+            </span>
+            <span class="ctrl-txt" id="videoModeTxt">SCROLL-SYNC</span>
+          </button>
+          <!-- SFX Toggle -->
+          <button class="settings-item-btn" id="sfxToggle" role="menuitem" title="Effets sonores cyber">
+            <span class="ctrl-icon">
+              <svg class="ctrl-svg" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor"
+                stroke-width="2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              </svg>
+            </span>
+            <span class="ctrl-txt">SFX: OFF</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Language Toggle -->
+      <button class="ctrl-btn" id="langToggle" title="Langue (FR / EN)" aria-label="Changer de langue">
+        <span class="ctrl-txt lang-indicator">EN</span>
+      </button>
+
+      <!-- Hamburger Menu Toggle -->
+      <button class="nav-burger" aria-label="Menu" id="burger" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#hero" data-i18n="nav.home">Accueil</a></li>
+      <li><a href="#profil" data-i18n="nav.profile">Profil</a></li>
+      <li><a href="#certs" data-i18n="nav.certs">Certifications</a></li>
+      <li><a href="#projets" data-i18n="nav.projects">Projets</a></li>
+      <li><a href="#parcours" data-i18n="nav.timeline">Parcours</a></li>
+      <li><a href="#arsenal" data-i18n="nav.skills">Arsenal</a></li>
+      <li><a href="#terminal" data-i18n="nav.terminal">Terminal</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Me contacter</a></li>
+      <li><a href="cv-yosri-hamdouni.pdf" class="mobile-cta" download>Télécharger CV (PDF)</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 1 — HERO & COMMAND CENTER (DOCKED DUAL HUD)
+  ═══════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="container hero-container">
+
+      <!-- ASYMMETRICAL DOCKED HUD GRID: LEFT IDENTITY + RIGHT TERMINAL -->
+      <div class="hero-dock-grid">
+
+        <!-- LEFT RAIL: Identity, Philosophy, CTA & Proof -->
+        <div class="hero-left-dock">
+          <div class="hero-identity glass-panel">
+            <div class="hero-status-pill">
+              <span class="status-dot-green"></span> <span data-i18n="hero.badge">Cyber Security Engineer</span>
+            </div>
+
+            <h1 class="hero-title">
+              <span class="name-first">HAMDOUNI</span> <span class="name-last">YOSRI</span><span
+                class="hero-cursor">_</span>
+            </h1>
+
+            <p class="hero-tagline" data-i18n="hero.tagline">
+              Comprendre l’<span class="hl-cyan">attaque</span>. Construire la <span class="hl-blue">défense</span>.
+            </p>
+
+            <p class="hero-sub" data-i18n="hero.sub">
+              Audit des risques · Sécurité offensive · Cyberdéfense.<br>
+              Une approche de terrain, du signal à l’action.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="hero-actions">
+              <a href="#projets" class="btn-hero-primary" data-i18n="hero.explore">
+                Explorer mes projets →
+              </a>
+              <a href="#contact" class="btn-hero-secondary" data-i18n="hero.contact">
+                <span class="btn-prompt">&gt;_</span> Me contacter
+              </a>
+              <a href="cv-yosri-hamdouni.pdf" class="btn-hero-cv" download>
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"
+                  style="vertical-align:-2px;margin-right:4px;">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span data-i18n="hero.cv">CV (PDF)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT RAIL: Live Terminal Initialization Box (Glass Cyber Shell) -->
+        <div class="hero-right-dock">
+          <div class="hero-terminal glass-panel" id="heroTerminal">
+            <div class="terminal-bar">
+              <div class="term-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="terminal-title">root@yosri:~/secops — SESSION_INIT</span>
+              <span class="terminal-video-pill">
+                <span class="v-dot"></span> SEC//ACTIVE
+              </span>
+            </div>
+            <div class="terminal-body">
+              <div class="term-line"><span class="prompt">root@yosri:~$</span> <span class="cmd-text">whoami</span>
+              </div>
+              <div class="term-res">
+                <p class="res-highlight" data-i18n="hero.term.res">&gt; CYBERSECURITY ENGINEER IN THE MAKING</p>
+                <div class="res-list">
+                  <span class="res-item" data-i18n="hero.term.audit"><span class="chk-ok">[ OK ]</span> Audit &amp; Gouvernance (ISO 27001 Lead Auditor, RHCSA)</span>
+                  <span class="res-item" data-i18n="hero.term.offensive"><span class="chk-ok">[ OK ]</span> Sécurité Offensive (eCPPT v2, AD Pentest, Root Access)</span>
+                  <span class="res-item" data-i18n="hero.term.defense"><span class="chk-ok">[ OK ]</span> Défense SOC &amp; DFIR (Wazuh, Sentinel, SOAR &lt;10s)</span>
+                </div>
+              </div>
+              <div class="term-line"><span class="prompt">root@yosri:~$</span> <span class="cmd-text">status --target
+                  pfe-2027</span></div>
+              <div class="term-res">
+                <p class="res-meta" data-i18n="hero.term.pfe">&gt; Stage PFE 6 mois · Tunisie &amp; International</p>
+                <p class="res-meta text-cyan" data-i18n="hero.term.mobility">&gt; Mobilité active · Opérationnel immédiatement</p>
+                <span class="cursor-underscore">_</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 4 FULL-WIDTH HORIZONTAL GLASS STATISTICS CARDS (REFERENCE DESIGN) -->
+      <div class="hero-stats-row reveal">
+        <!-- Card 1 -->
+        <div class="stat-card glass-panel stat-border-blue">
+          <div class="stat-icon-wrap stat-icon-blue">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <div class="stat-info">
+            <span class="stat-num">04</span>
+            <span class="stat-label" data-i18n="stat.audit">Missions d'audit indépendant</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="stat-card glass-panel stat-border-purple">
+          <div class="stat-icon-wrap stat-icon-purple">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+              <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+              <path d="M4 22h16"></path>
+              <path d="M10 14.66V17c0 .55-.45 1-1 1H7v2h10v-2h-2c-.55 0-1-.45-1-1v-2.34"></path>
+              <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path>
+            </svg>
+          </div>
+          <div class="stat-info">
+            <span class="stat-num">100+</span>
+            <span class="stat-label" data-i18n="stat.learners">Apprenants formés &amp; mentorés</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="stat-card glass-panel stat-border-green">
+          <div class="stat-icon-wrap stat-icon-green">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <div class="stat-info">
+            <span class="stat-num">&lt;10s</span>
+            <span class="stat-label" data-i18n="stat.soar">Réponse active SOAR à incident</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="stat-card glass-panel stat-border-cyan">
+          <div class="stat-icon-wrap stat-icon-cyan">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+              <polyline points="16 7 22 7 22 13"></polyline>
+            </svg>
+          </div>
+          <div class="stat-info">
+            <span class="stat-num">~35s</span>
+            <span class="stat-label" data-i18n="stat.score">Calcul score maturité (CyberScore TN)</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- CERTIFICATIONS QUICK PREVIEW DOCK (MATCHING REFERENCE IMAGE) -->
+      <div class="hero-certs-preview glass-panel reveal">
+        <div class="certs-preview-header">
+          <div class="certs-preview-title-box">
+            <div class="cert-ribbon-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="8" r="6"></circle>
+                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+              </svg>
+            </div>
+            <div>
+              <h3 class="certs-preview-title" data-i18n="certs.preview.title">Compétences certifiées</h3>
+              <p class="certs-preview-sub" data-i18n="certs.preview.sub">Des certifications reconnues pour une expertise solide</p>
+            </div>
+          </div>
+          <a href="#certs" class="certs-preview-link">
+            <span data-i18n="certs.preview.link">Voir toutes</span> <span class="arr">→</span>
+          </a>
+        </div>
+
+        <div class="certs-preview-chips">
+          <a href="#certs" class="cert-chip-card">
+            <span class="chip-badge-icon badge-iso">ISO</span>
+            <div>
+              <span class="chip-title">ISO/IEC 27001</span>
+              <span class="chip-sub">Lead Auditor</span>
+            </div>
+          </a>
+          <a href="#certs" class="cert-chip-card">
+            <span class="chip-badge-icon badge-ecppt">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </span>
+            <div>
+              <span class="chip-title">eCPPT v2</span>
+              <span class="chip-sub">INE Security</span>
+            </div>
+          </a>
+          <a href="#certs" class="cert-chip-card">
+            <span class="chip-badge-icon badge-ms">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path d="M2 2h9v9H2z" fill="#f25022" />
+                <path d="M13 2h9v9h-9z" fill="#7fba00" />
+                <path d="M2 13h9v9H2z" fill="#00a4ef" />
+                <path d="M13 13h9v9h-9z" fill="#ffb900" />
+              </svg>
+            </span>
+            <div>
+              <span class="chip-title">Microsoft SC-200</span>
+              <span class="chip-sub">Security Operations</span>
+            </div>
+          </a>
+          <a href="#certs" class="cert-chip-card">
+            <span class="chip-badge-icon badge-splunk">splunk&gt;</span>
+            <div>
+              <span class="chip-title">Splunk Core</span>
+              <span class="chip-sub">Certified Power User</span>
+            </div>
+          </a>
+          <a href="#certs" class="cert-chip-card">
+            <span class="chip-badge-icon badge-redhat">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path
+                  d="M19.5 12c0-.23-.01-.45-.03-.68l1.86-1.41c.4-.3.51-.86.26-1.3l-1.87-3.23a.987.987 0 0 0-1.25-.42l-2.15.91c-.37-.26-.76-.49-1.17-.68l-.29-2.31A.996.996 0 0 0 13.88 2h-3.75c-.5 0-.92.37-.98.88l-.29 2.31c-.41.19-.8.42-1.17.68l-2.15-.91c-.46-.2-.99-.02-1.25.42L2.42 8.61c-.25.44-.14 1 .26 1.3l1.86 1.41c-.02.23-.03.45-.03.68s.01.45.03.68l-1.86 1.41c-.4.3-.51.86-.26 1.3l1.87 3.23c.26.44.79.62 1.25.42l2.15-.91c.37.26.76.49 1.17.68l.29 2.31c.06.51.48.88.98.88h3.75c.5 0 .92-.37.98-.88l.29-2.31c.41-.19.8-.42 1.17-.68l2.15.91c.46.2.99.02 1.25-.42l1.87-3.23c.25-.44.14-1-.26-1.3l-1.86-1.41c.02-.23.03-.45.03-.68z"
+                  fill="#e23b4a" />
+              </svg>
+            </span>
+            <div>
+              <span class="chip-title">Red Hat RHCE &amp; RHCSA</span>
+              <span class="chip-sub">Enterprise Linux 9</span>
+            </div>
+          </a>
+          <a href="#certs" class="cert-chip-card">
+            <span class="chip-badge-icon badge-python">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                <path
+                  d="M12 2C6.47 2 6.47 4.5 6.47 4.5H12v1.5H4.5S2 6 2 11.5s2.5 5.5 2.5 5.5H6v-2.5s0-3 3-3h6s3 0 3-3V4.5S17.5 2 12 2zm-1.5 2a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm1.5 18c5.53 0 5.53-2.5 5.53-2.5H12V18h7.5s2.5 0 2.5-5.5-2.5-5.5-2.5-5.5H18v2.5s0 3-3 3H9s-3 0-3 3v4S6.5 22 12 22zm1.5-2a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"
+                  fill="#00D9FF" />
+              </svg>
+            </span>
+            <div>
+              <span class="chip-title">PCAP – Python</span>
+              <span class="chip-sub">Python Institute</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Scroll Hint -->
+    <a href="#profil" class="scroll-hint-bar" aria-label="Défiler pour avancer la vidéo">
+      <span class="scroll-txt" data-i18n="scroll.hint">DÉFILEZ POUR AVANCER LA VIDÉO</span>
+      <div class="scroll-icon">
+        <div class="scroll-dot"></div>
+      </div>
+    </a>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 1 — PROFIL (01 / 07)
+  ═══════════════════════════════════════════ -->
+  <section class="section" id="profil">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="profil.tag">01 / 07 · PROFIL</span>
+        <h2 class="section-title" data-i18n="profil.title">La curiosité comme <span class="accent">première ligne de défense</span>.</h2>
+      </div>
+
+      <div class="profile-grid">
+
+        <!-- Radar Chart Card -->
+        <div class="profile-visual reveal">
+          <div class="radar-card">
+            <div class="radar-header">
+              <span class="radar-title" data-i18n="profil.radar.title">MATRICE DES COMPÉTENCES OPÉRATIONNELLES</span>
+              <span class="radar-badge">HEXAGONAL RADAR</span>
+            </div>
+            <div class="radar-canvas-wrap">
+              <canvas id="radarCanvas" width="340" height="340"></canvas>
+            </div>
+            <div class="radar-footer">
+              <div class="radar-legend-item"><span class="legend-dot green"></span> <span data-i18n="profil.radar.legend1">Couverture Opérationnelle</span></div>
+              <div class="radar-legend-item"><span class="legend-dot cyan"></span> <span data-i18n="profil.radar.legend2">R&amp;D Offensive &amp; SOC</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Narrative & Background -->
+        <div class="profile-text">
+          <div class="role-badge reveal" data-i18n="profil.role">YOSRI HAMDOUNI · CONSULTANT CYBERSÉCURITÉ</div>
+          <h3 class="profile-quote reveal" data-i18n="profil.quote">
+            Comprendre un système. Challenger ses défenses. Transformer les vulnérabilités en actions concrètes.
+          </h3>
+          <p class="profile-bio reveal" data-i18n="profil.bio1">
+            Élève-ingénieur en 3ᵉ année à <strong>TEK-UP</strong>, certifié <strong>ISO 27001 Lead Auditor, eCPPT v2,
+              SC-200, Splunk et Red Hat RHCE/RHCSA</strong>. Je relie la gouvernance des risques (SMSI, NIS 2, DORA,
+            revues CIS &amp; Active Directory) à la réalité opérationnelle : tests d’intrusion, détection et réponse aux
+            incidents.
+          </p>
+          <p class="profile-bio reveal" data-i18n="profil.bio2">
+            À l'<strong>ANCS (Agence Nationale de la Cybersécurité)</strong>, j’ai conçu <strong>CyberScore TN</strong>
+            pour évaluer automatiquement les Opérateurs d’Importance Vitale (OIV) avec validation assistée par LLM local
+            souverain. Avec <strong>Smart SOC</strong>, j’ai automatisé la réponse active à incident en <strong>&lt;10
+              secondes</strong>. Et auprès de plus de <strong>100 apprenants</strong> (Python Express &amp; GOMYCODE),
+            je transmets cette même exigence méthodologique.
+          </p>
+
+          <!-- PFE Callout -->
+          <div class="pfe-card reveal">
+            <div class="pfe-header">
+              <span class="pfe-chip" data-i18n="profil.pfe.chip">PROCHAIN CHAPITRE</span>
+              <span class="pfe-period" data-i18n="profil.pfe.period">DÉBUT 2027 · 6 MOIS</span>
+            </div>
+            <h4 class="pfe-title" data-i18n="profil.pfe.title">Stage de Fin d'Études (PFE conventionné) — Pré-embauche CDI</h4>
+            <p class="pfe-desc" data-i18n="profil.pfe.desc">
+              Périmètre ciblé : <strong>Consultant Cybersécurité / Ingénieur Sécurité</strong> (Audit des Risques, SOC
+              &amp; Détection, ou Sécurité Offensive / Pentest).
+              <br />Mobilité géographique complète : <strong>Tunisie &amp; International</strong>.
+            </p>
+          </div>
+
+          <!-- Language Badges -->
+          <div class="badges-row reveal">
+            <span class="badge badge-accent" data-i18n="profil.badge.mobility">Mobilité : Tunisie &amp; International</span>
+            <span class="badge" data-i18n="profil.badge.fr"><strong>FR</strong> Français · C1 (Courant)</span>
+            <span class="badge" data-i18n="profil.badge.en"><strong>EN</strong> Anglais · B2/C1 (Professionnel)</span>
+            <span class="badge" data-i18n="profil.badge.ar"><strong>AR</strong> Arabe · Bilingue</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 2 — CERTIFICATIONS (02 / 07)
+  ═══════════════════════════════════════════ -->
+  <section class="section" id="certs">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="certs.tag">02 / 07 · CERTIFICATIONS</span>
+        <h2 class="section-title" data-i18n="certs.title">Compétences <span class="accent">certifiées</span>.</h2>
+        <p class="section-sub" data-i18n="certs.sub">Accréditations reconnues par l'industrie en gouvernance, analyse SOC, systèmes et pentest.</p>
+      </div>
+
+      <div class="certs-grid">
+
+        <!-- 1. ISO 27001 -->
+        <div class="cert-card reveal" data-cert="iso27001">
+          <div class="cert-card-inner">
+            <div class="cert-top">
+              <span class="cert-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  <path d="m9 12 2 2 4-4"></path>
+                </svg>
+              </span>
+              <span class="cert-status-badge verified" data-i18n="cert.verified">VÉRIFIÉ</span>
+            </div>
+            <h3 class="cert-name">ISO/IEC 27001</h3>
+            <div class="cert-issuer">Lead Auditor</div>
+            <p class="cert-desc" data-i18n="cert.iso.desc">Audit SMSI, gouvernance ISO 27002 / 27005, exigences de conformité NIS 2 et DORA, restitution managériale C-Level.</p>
+            <div class="cert-meta" data-i18n="cert.iso.meta">GOUVERNANCE &amp; SMSI</div>
+          </div>
+        </div>
+
+        <!-- 2. eCPPT v2 -->
+        <div class="cert-card reveal" data-cert="ecppt">
+          <div class="cert-card-inner">
+            <div class="cert-top">
+              <span class="cert-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="22" y1="12" x2="18" y2="12"></line>
+                  <line x1="6" y1="12" x2="2" y2="12"></line>
+                  <line x1="12" y1="6" x2="12" y2="2"></line>
+                  <line x1="12" y1="22" x2="12" y2="18"></line>
+                </svg>
+              </span>
+              <span class="cert-status-badge verified" data-i18n="cert.verified">VÉRIFIÉ</span>
+            </div>
+            <h3 class="cert-name">eCPPT v2</h3>
+            <div class="cert-issuer">INE Security — Certified Professional Penetration Tester</div>
+            <p class="cert-desc" data-i18n="cert.ecppt.desc">Pentest réseau &amp; web avancé, pivoting complexe, exploitation Active Directory, buffer overflow et rapport professionnel.</p>
+            <div class="cert-meta" data-i18n="cert.ecppt.meta">SÉCURITÉ OFFENSIVE</div>
+          </div>
+        </div>
+
+        <!-- 3. SC-200 -->
+        <div class="cert-card reveal" data-cert="sc200">
+          <div class="cert-card-inner">
+            <div class="cert-top">
+              <span class="cert-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+                </svg>
+              </span>
+              <span class="cert-status-badge verified" data-i18n="cert.verified">VÉRIFIÉ</span>
+            </div>
+            <h3 class="cert-name">Microsoft SC-200</h3>
+            <div class="cert-issuer">Microsoft Security Operations Analyst</div>
+            <p class="cert-desc" data-i18n="cert.sc200.desc">Microsoft Sentinel SIEM/SOAR, Microsoft Defender XDR, requêtes de Threat Hunting KQL et réponse aux incidents cloud.</p>
+            <div class="cert-meta" data-i18n="cert.sc200.meta">SOC &amp; CLOUD SECURITY</div>
+          </div>
+        </div>
+
+        <!-- 4. Splunk Power User -->
+        <div class="cert-card reveal" data-cert="splunk">
+          <div class="cert-card-inner">
+            <div class="cert-top">
+              <span class="cert-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+              </span>
+              <span class="cert-status-badge verified" data-i18n="cert.verified">VÉRIFIÉ</span>
+            </div>
+            <h3 class="cert-name">Splunk Core</h3>
+            <div class="cert-issuer">Certified Power User</div>
+            <p class="cert-desc" data-i18n="cert.splunk.desc">Recherche avancée SPL, création de tableaux de bord, modélisation de données, règles de corrélation et alertes de production.</p>
+            <div class="cert-meta" data-i18n="cert.splunk.meta">SIEM &amp; ANALYTICS</div>
+          </div>
+        </div>
+
+        <!-- 5. RHCE / RHCSA -->
+        <div class="cert-card reveal" data-cert="rhce">
+          <div class="cert-card-inner">
+            <div class="cert-top">
+              <span class="cert-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                  <line x1="8" y1="21" x2="16" y2="21"></line>
+                  <line x1="12" y1="17" x2="12" y2="21"></line>
+                </svg>
+              </span>
+              <span class="cert-status-badge verified" data-i18n="cert.verified">VÉRIFIÉ</span>
+            </div>
+            <h3 class="cert-name">Red Hat RHCE &amp; RHCSA</h3>
+            <div class="cert-issuer">Red Hat — Enterprise Linux 9</div>
+            <p class="cert-desc" data-i18n="cert.rhce.desc">Administration système avancée RHEL 9, automatisation Ansible, durcissement SELinux Enforcing, Firewalld DROP et stockage.</p>
+            <div class="cert-meta" data-i18n="cert.rhce.meta">LINUX HARDENING</div>
+          </div>
+        </div>
+
+        <!-- 6. EX188 -->
+        <div class="cert-card reveal" data-cert="ex188">
+          <div class="cert-card-inner">
+            <div class="cert-top">
+              <span class="cert-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                  </path>
+                  <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                  <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+              </span>
+              <span class="cert-status-badge verified" data-i18n="cert.verified">VÉRIFIÉ</span>
+            </div>
+            <h3 class="cert-name">Red Hat EX188</h3>
+            <div class="cert-issuer">Red Hat Certified Specialist in Containers</div>
+            <p class="cert-desc" data-i18n="cert.ex188.desc">Déploiement et sécurisation de conteneurs Podman/Docker, gestion d'images durcies, volumes et architectures micro-services.</p>
+            <div class="cert-meta" data-i18n="cert.ex188.meta">CONTAINERS &amp; DEVOPS</div>
+          </div>
+        </div>
+
+        <!-- 7. eJPT -->
+        <div class="cert-card reveal" data-cert="ejpt">
+          <div class="cert-card-inner">
+            <div class="cert-top">
+              <span class="cert-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <circle cx="12" cy="12" r="6"></circle>
+                  <circle cx="12" cy="12" r="2"></circle>
+                </svg>
+              </span>
+              <span class="cert-status-badge verified" data-i18n="cert.verified">VÉRIFIÉ</span>
+            </div>
+            <h3 class="cert-name">eJPT</h3>
+            <div class="cert-issuer">INE — Junior Penetration Tester</div>
+            <p class="cert-desc" data-i18n="cert.ejpt.desc">Fondamentaux du test d'intrusion, cartographie réseau Nmap, analyse de vulnérabilités et exploitation pratique.</p>
+            <div class="cert-meta" data-i18n="cert.ejpt.meta">ASSESSMENT PRATIQUE</div>
+          </div>
+        </div>
+
+        <!-- 8. PCAP -->
+        <div class="cert-card reveal" data-cert="pcap">
+          <div class="cert-card-inner">
+            <div class="cert-top">
+              <span class="cert-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </span>
+              <span class="cert-status-badge verified" data-i18n="cert.verified">VÉRIFIÉ</span>
+            </div>
+            <h3 class="cert-name">PCAP — Python</h3>
+            <div class="cert-issuer">Python Institute — Certified Associate in Python</div>
+            <p class="cert-desc" data-i18n="cert.pcap.desc">Développement d'outils de sécurité en Python, scripts réseau Scapy, multi-threading, intégration d'API et agents d'audit.</p>
+            <div class="cert-meta" data-i18n="cert.pcap.meta">CYBERSCRIPTING &amp; AUTOMATION</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 3 — PROJETS (03 / 07)
+  ═══════════════════════════════════════════ -->
+  <section class="section" id="projets">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="projects.tag">03 / 07 · PROJETS</span>
+        <h2 class="section-title" data-i18n="projects.title">Du code. <span class="accent">De l’impact</span>.</h2>
+        <p class="section-sub" data-i18n="projects.sub">Frameworks autonomes, pipelines SOC réactifs et environnements de tests offensifs.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="filter-tabs reveal" id="projectFilters">
+        <button class="filter-tab active" data-filter="all" data-i18n="projects.filter.all">Tous (05)</button>
+        <button class="filter-tab" data-filter="audit" data-i18n="projects.filter.audit">Audit &amp; Risques</button>
+        <button class="filter-tab" data-filter="defense" data-i18n="projects.filter.defense">Cyberdéfense &amp; SOC</button>
+        <button class="filter-tab" data-filter="offensive" data-i18n="projects.filter.offensive">Sécurité Offensive</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- PROJET 1 : CyberScore TN -->
+        <div class="project-card reveal" data-category="audit">
+          <div class="project-banner">
+            <div class="project-status live">
+              <span class="status-dot"></span> <span data-i18n="p1.status">OPÉRATIONNEL (ANCS)</span>
+            </div>
+            <div class="project-benchmark" data-i18n="p1.bench">~35s par cible auditée</div>
+          </div>
+          <div class="project-body">
+            <div class="project-num" data-i18n="p1.num">PROJET 01/05 · AUDIT &amp; RISQUES</div>
+            <h3 class="project-title">CyberScore TN</h3>
+            <p class="project-tagline" data-i18n="p1.tagline">De la surface d’attaque à la décision.</p>
+            <p class="project-desc" data-i18n="p1.desc">
+              Framework autonome d’audit d’infrastructures critiques pour <strong>OIV</strong>. Reconnaissance
+              multi-threads (150 threads, TCP/UDP), corrélation CVE via <strong>LLM souverain local (Qwen2.5)</strong>
+              et rapports de conformité ISO 27001 / NIS 2 scellés SHA-256.
+            </p>
+            <div class="project-metric-pill">
+              <span class="pill-label" data-i18n="p1.pill.label">Gain de productivité :</span>
+              <span class="pill-val" data-i18n="p1.pill.val">&gt;90% vs méthode manuelle</span>
+            </div>
+            <div class="project-stack">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Multi-Agent AI</span>
+              <span class="tech-tag">Nmap</span>
+              <span class="tech-tag">Ollama</span>
+              <span class="tech-tag">Next.js 14</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">RHEL 9.5</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/YosriSecOps/cyberscore-probe-agent" target="_blank" rel="noopener"
+                class="proj-link">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"
+                  style="vertical-align:-2px;margin-right:6px">
+                  <path
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>Voir le repo GitHub →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJET 2 : Smart SOC -->
+        <div class="project-card reveal" data-category="defense">
+          <div class="project-banner">
+            <div class="project-status live">
+              <span class="status-dot"></span> <span data-i18n="p2.status">ARCHITECTURE SOC</span>
+            </div>
+            <div class="project-benchmark" data-i18n="p2.bench">&lt;10s réponse active</div>
+          </div>
+          <div class="project-body">
+            <div class="project-num" data-i18n="p2.num">PROJET 02/05 · CYBERDÉFENSE</div>
+            <h3 class="project-title">Smart SOC &amp; Pipeline SOAR</h3>
+            <p class="project-tagline" data-i18n="p2.tagline">Détecter. Corréler. Neutraliser.</p>
+            <p class="project-desc" data-i18n="p2.desc">
+              Architecture SOC hybride alignée sur le framework <strong>MITRE ATT&amp;CK</strong>. Corrélation
+              multi-sources (Wazuh SIEM/XDR, Sentinel, Suricata IDS), réduction de la fatigue d'alerte (20:1) et
+              remédiation active automatisée en moins de 10 secondes.
+            </p>
+            <div class="project-metric-pill">
+              <span class="pill-label" data-i18n="p2.pill.label">Fatigue d'alerte :</span>
+              <span class="pill-val" data-i18n="p2.pill.val">Divisée par 20</span>
+            </div>
+            <div class="project-stack">
+              <span class="tech-tag">Wazuh XDR</span>
+              <span class="tech-tag">Sentinel</span>
+              <span class="tech-tag">Suricata IDS</span>
+              <span class="tech-tag">Splunk</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">SOAR</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/YosriSecOps/Smart_SOC" target="_blank" rel="noopener" class="proj-link">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"
+                  style="vertical-align:-2px;margin-right:6px">
+                  <path
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>Voir le repo GitHub →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJET 3 : Active Directory Offensive Lab -->
+        <div class="project-card reveal" data-category="offensive">
+          <div class="project-banner">
+            <div class="project-status lab">
+              <span class="status-dot"></span> <span data-i18n="p3.status">LAB D'INTRUSION</span>
+            </div>
+            <div class="project-benchmark" data-i18n="p3.bench">Simulation Tiering Model</div>
+          </div>
+          <div class="project-body">
+            <div class="project-num" data-i18n="p3.num">PROJET 03/05 · SÉCURITÉ OFFENSIVE</div>
+            <h3 class="project-title">Lab d'Audit Active Directory</h3>
+            <p class="project-tagline" data-i18n="p3.tagline">Cartographier les chemins d’attaque.</p>
+            <p class="project-desc" data-i18n="p3.desc">
+              Simulation d'audit d'intrusion sur domaines Windows Server : <strong>Kerberoasting, AS-REP Roasting,
+                Pass-the-Hash, Golden Ticket</strong>. Cartographie des chemins critiques via BloodHound et guide de
+              durcissement (<strong>Tiering Model, LAPS, GPO</strong>).
+            </p>
+            <div class="project-metric-pill">
+              <span class="pill-label" data-i18n="p3.pill.label">Durcissement :</span>
+              <span class="pill-val" data-i18n="p3.pill.val">Tiering Model &amp; LAPS</span>
+            </div>
+            <div class="project-stack">
+              <span class="tech-tag">Active Directory</span>
+              <span class="tech-tag">BloodHound</span>
+              <span class="tech-tag">Impacket</span>
+              <span class="tech-tag">Mimikatz</span>
+              <span class="tech-tag">Kerberos</span>
+              <span class="tech-tag">PowerShell</span>
+            </div>
+            <div class="project-links">
+              <span class="proj-link-disabled" data-i18n="p3.link.disabled">Simulation d’audit d’intrusion · Guide de durcissement rédigé</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJET 4 : Analyse des Risques EBIOS RM -->
+        <div class="project-card reveal" data-category="audit">
+          <div class="project-banner">
+            <div class="project-status case">
+              <span class="status-dot"></span> <span data-i18n="p4.status">CAS D'USAGE</span>
+            </div>
+            <div class="project-benchmark" data-i18n="p4.bench">Conformité NIS 2 &amp; DORA</div>
+          </div>
+          <div class="project-body">
+            <div class="project-num" data-i18n="p4.num">PROJET 04/05 · GOUVERNANCE &amp; RISQUES</div>
+            <h3 class="project-title">Modélisation EBIOS RM &amp; NIS 2</h3>
+            <p class="project-tagline" data-i18n="p4.tagline">Traduire les menaces en priorités.</p>
+            <p class="project-desc" data-i18n="p4.desc">
+              Cas d'usage d'audit de conformité selon la méthode ANSSI <strong>EBIOS RM v2</strong> : identification des
+              événements redoutés, scénarios de menace stratégiques et opérationnels, et alignement réglementaire
+              <strong>ISO 27005, NIS 2 et DORA</strong>.
+            </p>
+            <div class="project-metric-pill">
+              <span class="pill-label" data-i18n="p4.pill.label">Méthodologie :</span>
+              <span class="pill-val" data-i18n="p4.pill.val">ANSSI EBIOS RM v2</span>
+            </div>
+            <div class="project-stack">
+              <span class="tech-tag">EBIOS RM</span>
+              <span class="tech-tag">ISO 27005</span>
+              <span class="tech-tag">NIS 2</span>
+              <span class="tech-tag">DORA</span>
+              <span class="tech-tag">Cartographie</span>
+            </div>
+            <div class="project-links">
+              <span class="proj-link-disabled" data-i18n="p4.link.disabled">Cas d’usage d’audit de conformité · Matrice de traitement des risques</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJET 5 : VMS-Edge -->
+        <div class="project-card reveal" data-category="defense" style="grid-column: 1 / -1;">
+          <div class="project-banner">
+            <div class="project-status live">
+              <span class="status-dot"></span> <span data-i18n="p5.status">PROJET PERSONNEL</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-num" data-i18n="p5.num">PROJET 05/05 · SURVEILLANCE &amp; FORENSIQUE</div>
+            <h3 class="project-title">VMS-Edge</h3>
+            <p class="project-tagline" data-i18n="p5.tagline">Détecter. Alerter. Prouver.</p>
+            <p class="project-desc" data-i18n="p5.desc">
+              Plateforme de vidéosurveillance multi-caméras en Python : détection (<strong>Haar Cascade</strong>) et
+              reconnaissance faciale (<strong>LBPH</strong>) par flux, alertes <strong>Telegram</strong> avec anti-spam
+              (cooldown 15 s) et tatouage numérique <strong>DCT</strong> des captures pour la traçabilité des preuves.
+            </p>
+            <div class="project-metric-pill">
+              <span class="pill-label" data-i18n="p5.pill.label">Traçabilité des preuves :</span>
+              <span class="pill-val" data-i18n="p5.pill.val">Watermark DCT</span>
+            </div>
+            <div class="project-stack">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">OpenCV</span>
+              <span class="tech-tag">SQLite</span>
+              <span class="tech-tag">CustomTkinter</span>
+              <span class="tech-tag">Telegram API</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/YosriSecOps/VMS-Edge" target="_blank" rel="noopener" class="proj-link">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"
+                  style="vertical-align:-2px;margin-right:6px">
+                  <path
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 6.844a9.59 9.59 0 0 1 2.504.337c1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.02 10.02 0 0 0 22 12.017C22 6.484 17.522 2 12 2z" />
+                </svg>Voir le repo GitHub →
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 4 — PARCOURS & EXPÉRIENCES (04 / 07)
+  ═══════════════════════════════════════════ -->
+  <section class="section" id="parcours">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="timeline.tag">04 / 07 · PARCOURS</span>
+        <h2 class="section-title" data-i18n="timeline.title">Missions d'ingénierie &amp; <span class="accent">expérience</span>.</h2>
+        <p class="section-sub" data-i18n="timeline.sub">Du terrain opérationnel en agence nationale aux audits d'infrastructures d'entreprises.</p>
+      </div>
+
+      <div class="timeline">
+
+        <!-- 1. ANCS -->
+        <div class="timeline-item reveal">
+          <div class="timeline-node">
+            <div class="node-dot"></div>
+            <div class="node-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-date">07/2026 – 09/2026</span>
+              <span class="timeline-tag tag-neutral" data-i18n="tl1.tag">AGENCE NATIONALE</span>
+              <span class="timeline-loc">Tunis, TN</span>
+            </div>
+            <h3 class="timeline-title" data-i18n="tl1.title">ANCS — Agence Nationale de la Cybersécurité</h3>
+            <p class="timeline-role" data-i18n="tl1.role">Ingénieur Consultant Stagiaire — Audit Cybersécurité, SOC &amp; R&amp;D Offensive</p>
+
+            <ul class="timeline-bullets">
+              <li data-i18n="tl1.b1"><strong>Audit automatisé &amp; résilience des OIV (CyberScore TN) :</strong> Framework autonome d'évaluation de conformité (ISO 27001 / NIS 2) pour les Opérateurs d'Importance Vitale.</li>
+              <li data-i18n="tl1.b2"><strong>Validation PoC dynamique &amp; corrélation CVE :</strong> Détection des failles d'élévation et vérification assistée par LLM local souverain (Qwen2.5-Coder:7B via Ollama).</li>
+              <li data-i18n="tl1.b3"><strong>Déploiement durci &amp; scellement d'intégrité :</strong> Bastion conteneurisé durci sur RHEL 9.5 (SELinux Enforcing) et restitution de matrices de risques EBIOS RM.</li>
+            </ul>
+
+            <!-- KPI Chips Row -->
+            <div class="timeline-kpi-row">
+              <div class="kpi-chip">
+                <span class="kpi-val">~35 s / cible</span>
+                <span class="kpi-lbl" data-i18n="tl1.kpi1.lbl">Vitesse d'évaluation</span>
+              </div>
+              <div class="kpi-chip">
+                <span class="kpi-val">150 threads</span>
+                <span class="kpi-lbl" data-i18n="tl1.kpi2.lbl">Cartographie parallèle</span>
+              </div>
+              <div class="kpi-chip">
+                <span class="kpi-val">&gt;90 % de gain</span>
+                <span class="kpi-sub">vs [valeur à fournir par moi] en manuel</span>
+              </div>
+            </div>
+
+            <!-- Stack Tags -->
+            <div class="timeline-stack">
+              <span class="stack-label" data-i18n="tl1.stack">Stack :</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Ollama / Qwen2.5</span>
+              <span class="tech-tag">RHEL 9.5</span>
+              <span class="tech-tag">Docker</span>
+              <span class="tech-tag">ISO 27001</span>
+              <span class="tech-tag">NIS 2</span>
+              <span class="tech-tag">EBIOS RM</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. OTD -->
+        <div class="timeline-item reveal">
+          <div class="timeline-node">
+            <div class="node-dot"></div>
+            <div class="node-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-date">06/2025 – 07/2025</span>
+              <span class="timeline-tag tag-blue" data-i18n="tl2.tag">ENTREPRISE PUBLIQUE</span>
+              <span class="timeline-loc">Tunis, TN</span>
+            </div>
+            <h3 class="timeline-title" data-i18n="tl2.title">OTD — Office des Terres Domaniales</h3>
+            <p class="timeline-role" data-i18n="tl2.role">Consultant Stagiaire — Audit Sécurité des SI, Active Directory &amp; SOC</p>
+            <ul class="timeline-bullets">
+              <li data-i18n="tl2.b1"><strong>Audit technique &amp; conformité CIS Benchmarks :</strong> Audit de configuration sur plus de 30 équipements réseau Cisco et serveurs d'entreprise (Windows Server, RHEL) selon les benchmarks CIS/ANSSI ; réduction des surfaces d'attaque critiques.</li>
+              <li data-i18n="tl2.b2"><strong>Audit Active Directory &amp; chemins d'attaque :</strong> Cartographie approfondie des privilèges via PingCastle et BloodHound (détection de délégations abusives, comptes orphelins, faiblesses Kerberos) et préconisation du Tiering Model / LAPS.</li>
+              <li data-i18n="tl2.b3"><strong>Socle de surveillance SOC :</strong> Déploiement d'une sonde pilote SIEM Wazuh, corrélation des événements d'authentification suspects (Pass-the-Hash / brute-force) et présentation du rapport avec plan d'action à la DSI.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 3. Missions Indépendantes -->
+        <div class="timeline-item reveal">
+          <div class="timeline-node">
+            <div class="node-dot"></div>
+            <div class="node-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-date" data-i18n="tl3.date">2025 – Présent</span>
+              <span class="timeline-tag tag-green" data-i18n="tl3.tag">CONSEIL INDÉPENDANT</span>
+              <span class="timeline-loc">Tunis, TN</span>
+            </div>
+            <h3 class="timeline-title" data-i18n="tl3.title">Missions d'Audit &amp; Conseil Cyber Indépendant</h3>
+            <p class="timeline-role" data-i18n="tl3.role">Consultant Auditeur Cybersécurité Indépendant / Projets PME</p>
+            <ul class="timeline-bullets">
+              <li data-i18n="tl3.b1">Réalisation de <strong>4 missions d'audit de sécurité et de conformité</strong> pour PME et startups : pré-audits ISO 27001, revues de configuration Cloud Azure, tests d'intrusion Web (OWASP Top 10).</li>
+              <li data-i18n="tl3.b2">Animation d'ateliers de restitution managériale auprès des dirigeants d'entreprise et RSSI.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 4. Transmission & Leadership -->
+        <div class="timeline-item reveal">
+          <div class="timeline-node">
+            <div class="node-dot"></div>
+            <div class="node-line"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-date" data-i18n="tl4.date">2025 – Présent</span>
+              <span class="timeline-tag tag-purple" data-i18n="tl4.tag">PÉDAGOGIE &amp; MENTORAT</span>
+              <span class="timeline-loc">Tunis, TN</span>
+            </div>
+            <h3 class="timeline-title" data-i18n="tl4.title">Transmission Technique &amp; Leadership Pédagogique</h3>
+            <p class="timeline-role" data-i18n="tl4.role">Fondateur Python Express &amp; Formateur GOMYCODE</p>
+            <ul class="timeline-bullets">
+              <li data-i18n="tl4.b1"><strong>Python Express (Fondateur &amp; Formateur) :</strong> Direction d'une communauté technique de plus de <strong>100 apprenants</strong> ; élaboration de parcours pratiques en automatisation d'outils de sécurité, conception de labs cyber et mentorat personnalisé.</li>
+              <li data-i18n="tl4.b2"><strong>GOMYCODE (Formateur Microsoft Azure Cloud &amp; Automatisation) :</strong> Animation de modules sur l'architecture Cloud Azure, la gouvernance des identités (Entra ID) et l'automatisation d'administration sécurisée.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 5. Formation académique -->
+        <div class="timeline-item reveal">
+          <div class="timeline-node">
+            <div class="node-dot"></div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-meta">
+              <span class="timeline-date" data-i18n="tl5.date">2021 – Présent</span>
+              <span class="timeline-tag tag-blue" data-i18n="tl5.tag">CURSUS D'INGÉNIEUR</span>
+              <span class="timeline-loc">Tunis / Nabeul / Bizerte</span>
+            </div>
+            <h3 class="timeline-title" data-i18n="tl5.title">Formation Académique d'Excellence</h3>
+            <ul class="timeline-bullets">
+              <li data-i18n="tl5.b1"><strong>TEK-UP School of Engineering (2024 – Présent) :</strong> Diplôme d'Ingénieur en Cybersécurité &amp; Systèmes (3ᵉ année en cours).</li>
+              <li data-i18n="tl5.b2"><strong>IPEIN Nabeul (2022 – 2024) :</strong> Classes Préparatoires aux Concours Nationaux d'Ingénieurs (Filière Maths &amp; Physique - MP).</li>
+              <li data-i18n="tl5.b3"><strong>Lycée Secondaire de Bizerte (2021 – 2022) :</strong> Baccalauréat Scientifique (Section Mathématiques, Mention Très Bien).</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 5 — ARSENAL TECHNIQUE (05 / 07)
+  ═══════════════════════════════════════════ -->
+  <section class="section" id="arsenal">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="skills.tag">05 / 07 · ARSENAL</span>
+        <h2 class="section-title" data-i18n="skills.title">Arsenal technique &amp; <span class="accent">méthodologique</span>.</h2>
+        <p class="section-sub" data-i18n="skills.sub">De la conformité réglementaire de haut niveau aux outils de détection et d'exploitation de bas niveau.</p>
+      </div>
+
+      <!-- 3-Level Visual Legend -->
+      <div class="skills-legend reveal">
+        <div class="legend-item"><span class="legend-badge lvl-cert"></span> <span class="legend-text" data-i18n="skills.legend.cert">Certifié</span>
+        </div>
+        <div class="legend-item"><span class="legend-badge lvl-proj"></span> <span class="legend-text" data-i18n="skills.legend.proj">Pratiqué en projet</span></div>
+        <div class="legend-item"><span class="legend-badge lvl-notion"></span> <span class="legend-text" data-i18n="skills.legend.notion">Notions</span>
+        </div>
+      </div>
+
+      <div class="skills-grid">
+
+        <!-- Col 1 : Audit & Risques -->
+        <div class="skill-col reveal">
+          <div class="skill-col-header">
+            <span class="col-num">01</span>
+            <h3 class="skill-col-title" data-i18n="skills.col1.title">Audit, Risques &amp; Réglementation</h3>
+          </div>
+          <p class="skill-col-sub" data-i18n="skills.col1.sub">De la conformité à la résilience.</p>
+          <div class="skill-tags">
+            <span class="skill-pill lvl-cert" data-level="cert">ISO/IEC 27001</span>
+            <span class="skill-pill lvl-proj" data-level="proj">NIS 2</span>
+            <span class="skill-pill lvl-proj" data-level="proj">EBIOS RM v2</span>
+            <span class="skill-pill lvl-proj" data-level="proj">ISO 27002</span>
+            <span class="skill-pill lvl-proj" data-level="proj">ISO 27005</span>
+            <span class="skill-pill lvl-proj" data-level="proj">CIS Benchmarks</span>
+            <span class="skill-pill lvl-proj" data-level="proj">PingCastle</span>
+            <span class="skill-pill lvl-proj" data-level="proj">Guides ANSSI</span>
+          </div>
+          <details class="skills-more">
+            <summary>Voir plus (+4)</summary>
+            <div class="skills-more-tags">
+              <span class="skill-pill lvl-notion" data-level="notion">DORA</span>
+              <span class="skill-pill lvl-notion" data-level="notion">NIST CSF</span>
+              <span class="skill-pill lvl-notion" data-level="notion">PCI-DSS</span>
+              <span class="skill-pill lvl-notion" data-level="notion">SOC 2</span>
+            </div>
+          </details>
+          <div class="skill-deliverables">
+            <span class="deliverables-lbl" data-i18n="skills.deliverables">Livrables :</span>
+            <span class="deliverable-chip" data-i18n="skills.d1.1">Restitution C-Level</span>
+            <span class="deliverable-chip" data-i18n="skills.d1.2">Matrices EBIOS RM</span>
+            <span class="deliverable-chip" data-i18n="skills.d1.3">Rapports d'audit SMSI</span>
+          </div>
+        </div>
+
+        <!-- Col 2 : SOC & Détection -->
+        <div class="skill-col reveal" data-delay="100">
+          <div class="skill-col-header">
+            <span class="col-num">02</span>
+            <h3 class="skill-col-title" data-i18n="skills.col2.title">SOC, Détection &amp; Réponse</h3>
+          </div>
+          <p class="skill-col-sub" data-i18n="skills.col2.sub">Du signal à la réponse active.</p>
+          <div class="skill-tags">
+            <span class="skill-pill lvl-cert" data-level="cert">Microsoft Sentinel</span>
+            <span class="skill-pill lvl-cert" data-level="cert">Splunk Core</span>
+            <span class="skill-pill lvl-proj" data-level="proj">Wazuh XDR / SIEM</span>
+            <span class="skill-pill lvl-proj" data-level="proj">Suricata IDS</span>
+            <span class="skill-pill lvl-proj" data-level="proj">MITRE ATT&amp;CK</span>
+            <span class="skill-pill lvl-proj" data-level="proj">Playbooks SOAR (&lt;10s)</span>
+            <span class="skill-pill lvl-proj" data-level="proj">Requêtes KQL</span>
+            <span class="skill-pill lvl-proj" data-level="proj">Langage SPL</span>
+          </div>
+          <details class="skills-more">
+            <summary>Voir plus (+4)</summary>
+            <div class="skills-more-tags">
+              <span class="skill-pill lvl-proj" data-level="proj">Defender for Endpoint</span>
+              <span class="skill-pill lvl-proj" data-level="proj">Threat Hunting</span>
+              <span class="skill-pill lvl-notion" data-level="notion">Zeek Network Sec</span>
+              <span class="skill-pill lvl-notion" data-level="notion">DFIR</span>
+            </div>
+          </details>
+          <div class="skill-deliverables">
+            <span class="deliverables-lbl" data-i18n="skills.deliverables">Livrables :</span>
+            <span class="deliverable-chip" data-i18n="skills.d2.1">Playbooks d'incident</span>
+            <span class="deliverable-chip" data-i18n="skills.d2.2">Tableaux de bord SIEM</span>
+            <span class="deliverable-chip" data-i18n="skills.d2.3">Règles de détection</span>
+          </div>
+        </div>
+
+        <!-- Col 3 : Sécurité Offensive -->
+        <div class="skill-col reveal" data-delay="200">
+          <div class="skill-col-header">
+            <span class="col-num">03</span>
+            <h3 class="skill-col-title" data-i18n="skills.col3.title">Sécurité Offensive &amp; Pentest</h3>
+          </div>
+          <p class="skill-col-sub" data-i18n="skills.col3.sub">Penser comme l’adversaire.</p>
+          <div class="skill-tags">
+            <span class="skill-pill lvl-cert" data-level="cert">eCPPT v2</span>
+            <span class="skill-pill lvl-proj" data-level="proj">Élévation Privilèges AD</span>
+            <span class="skill-pill lvl-proj" data-level="proj">Kerberoasting / AS-REP</span>
+            <span class="skill-pill lvl-proj" data-level="proj">Burp Suite Pro</span>
+            <span class="skill-pill lvl-proj" data-level="proj">BloodHound / Mimikatz</span>
+            <span class="skill-pill lvl-proj" data-level="proj">Metasploit Framework</span>
+            <span class="skill-pill lvl-proj" data-level="proj">Validation PoC CVE</span>
+            <span class="skill-pill lvl-proj" data-level="proj">Pentest Web &amp; Réseau</span>
+          </div>
+          <details class="skills-more">
+            <summary>Voir plus (+4)</summary>
+            <div class="skills-more-tags">
+              <span class="skill-pill lvl-proj" data-level="proj">OWASP Top 10</span>
+              <span class="skill-pill lvl-proj" data-level="proj">Pass-the-Hash</span>
+              <span class="skill-pill lvl-proj" data-level="proj">Nmap &amp; Wireshark</span>
+              <span class="skill-pill lvl-notion" data-level="notion">Scapy Packet Crafting</span>
+            </div>
+          </details>
+          <div class="skill-deliverables">
+            <span class="deliverables-lbl" data-i18n="skills.deliverables">Livrables :</span>
+            <span class="deliverable-chip" data-i18n="skills.d3.1">Rapports de pentest</span>
+            <span class="deliverable-chip" data-i18n="skills.d3.2">PoC d'exploitation</span>
+            <span class="deliverable-chip" data-i18n="skills.d3.3">Plans de remédiation</span>
+          </div>
+        </div>
+
+        <!-- Col 4 : Systèmes & Cloud -->
+        <div class="skill-col reveal" data-delay="300">
+          <div class="skill-col-header">
+            <span class="col-num">04</span>
+            <h3 class="skill-col-title" data-i18n="skills.col4.title">Systèmes, Réseaux &amp; Cloud</h3>
+          </div>
+          <p class="skill-col-sub" data-i18n="skills.col4.sub">Infrastructures durcies &amp; code.</p>
+          <div class="skill-tags">
+            <span class="skill-pill lvl-cert" data-level="cert">RHEL 9.5 (RHCE)</span>
+            <span class="skill-pill lvl-cert" data-level="cert">Docker (EX188)</span>
+            <span class="skill-pill lvl-cert" data-level="cert">Python (PCAP)</span>
+            <span class="skill-pill lvl-proj" data-level="proj">SELinux Enforcing</span>
+            <span class="skill-pill lvl-proj" data-level="proj">Microsoft Entra ID</span>
+            <span class="skill-pill lvl-proj" data-level="proj">Windows Server / AD</span>
+            <span class="skill-pill lvl-proj" data-level="proj">Bash Scripting</span>
+            <span class="skill-pill lvl-proj" data-level="proj">LLM Local (Ollama)</span>
+          </div>
+          <details class="skills-more">
+            <summary>Voir plus (+3)</summary>
+            <div class="skills-more-tags">
+              <span class="skill-pill lvl-proj" data-level="proj">Firewalld DROP</span>
+              <span class="skill-pill lvl-proj" data-level="proj">Réseaux Cisco</span>
+              <span class="skill-pill lvl-proj" data-level="proj">FastAPI &amp; Next.js 14</span>
+            </div>
+          </details>
+          <div class="skill-deliverables">
+            <span class="deliverables-lbl" data-i18n="skills.deliverables">Livrables :</span>
+            <span class="deliverable-chip" data-i18n="skills.d4.1">Blueprints durcissement</span>
+            <span class="deliverable-chip" data-i18n="skills.d4.2">Scripts d'automatisation</span>
+            <span class="deliverable-chip" data-i18n="skills.d4.3">Conteneurs durcis</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 6 — TERMINAL CLI (06 / 07)
+  ═══════════════════════════════════════════ -->
+  <section class="section" id="terminal">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="terminal.tag">06 / 07 · TERMINAL</span>
+        <h2 class="section-title" data-i18n="terminal.title">Explorez mon profil en <span class="accent">ligne de commande</span>.</h2>
+        <p class="section-sub" data-i18n="terminal.sub">Pas de scan intrusif. Pas de magie. Juste mon profil, version terminal interactive.</p>
+      </div>
+
+      <div class="terminal-wrapper reveal">
+        <div class="interactive-terminal" id="interactiveTerminal">
+          <div class="terminal-bar">
+            <div class="term-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="terminal-title">yosri@secops:~ (bash interactive shell)</span>
+            <span class="term-status-badge">ONLINE</span>
+          </div>
+
+          <div class="terminal-screen" id="terminalScreen">
+            <div class="term-banner">
+              <pre class="ascii-art">
+ __   _____  ____  ____  ___   _   _    _    __  __ ____   ___  _   _ _   _ ___ 
+ \ \ / / _ \/ ___||  _ \|_ _| | | | |  / \  |  \/  |  _ \ / _ \| | | | \ | |_ _|
+  \ V / | | \___ \| |_) || |  | |_| | / _ \ | |\/| | | | | | | | | | |  \| || | 
+   | || |_| |___) |  _ &lt; | |  |  _  |/ ___ \| |  | | |_| | |_| | |_| | |\  || | 
+   |_| \___/|____/|_| \_\___| |_| |_/_/   \_\_|  |_|____/ \___/ \___/|_| \_|___|
+              </pre>
+              <div class="ascii-title-bar">&gt; YOSRI HAMDOUNI &middot; SECOPS COMMAND SHELL</div>
+              <p class="term-welcome" data-i18n="terminal.welcome">Bienvenue sur le shell interactif de <strong>Yosri Hamdouni</strong>.</p>
+              <p class="term-hint" data-i18n="terminal.hint">Tapez <span class="cmd-pill">help</span> pour afficher la liste des commandes ou cliquez sur les suggestions ci-dessous :</p>
+
+              <div class="quick-cmds">
+                <button class="quick-cmd-btn" data-cmd="whoami">whoami</button>
+                <button class="quick-cmd-btn" data-cmd="projects">projects</button>
+                <button class="quick-cmd-btn" data-cmd="certs">certs</button>
+                <button class="quick-cmd-btn" data-cmd="parcours">parcours</button>
+                <button class="quick-cmd-btn" data-cmd="skills">skills</button>
+                <button class="quick-cmd-btn" data-cmd="cv">cv</button>
+                <button class="quick-cmd-btn" data-cmd="contact">contact</button>
+                <button class="quick-cmd-btn" data-cmd="audit">audit</button>
+                <button class="quick-cmd-btn" data-cmd="clear">clear</button>
+              </div>
+            </div>
+
+            <div id="termLogs"></div>
+
+            <div class="term-input-line">
+              <span class="term-prompt">yosri@secops ~ $</span>
+              <input type="text" id="termInput" class="term-input" autocomplete="off" spellcheck="false" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 7 — CONTACT & IMPRESSION DU CV (07 / 07)
+  ═══════════════════════════════════════════ -->
+  <section class="section" id="contact">
+    <div class="container contact-container">
+
+      <div class="section-header reveal">
+        <span class="section-tag" data-i18n="contact.tag">07 / 07 · CONTACT</span>
+        <h2 class="section-title" data-i18n="contact.title">Une mission. <span class="accent">Un nouveau défi</span>.</h2>
+        <p class="section-sub" data-i18n="contact.sub">
+          À la recherche d’un stage PFE de 6 mois à partir de début 2027 en tant que Consultant / Ingénieur
+          Cybersécurité. Mobilité complète en Tunisie et à l'international.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Direct communication channels -->
+        <div class="contact-links reveal">
+          <a class="contact-link" id="emailLink" href="mailto:yosri.hamdouni.cyber@gmail.com"
+            data-user="yosri.hamdouni.cyber" data-domain="gmail.com">
+            <span class="cl-icon">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </span>
+            <div>
+              <span class="cl-label">EMAIL DIRECT</span>
+              <span class="cl-value" id="emailVal">yosri.hamdouni.cyber@gmail.com</span>
+            </div>
+          </a>
+          <a class="contact-link" href="https://linkedin.com/in/yosri-hamdouni" target="_blank" rel="noopener">
+            <span class="cl-icon">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </span>
+            <div>
+              <span class="cl-label">LINKEDIN</span>
+              <span class="cl-value">linkedin.com/in/yosri-hamdouni</span>
+            </div>
+          </a>
+          <a class="contact-link" href="https://github.com/YosriSecOps" target="_blank" rel="noopener">
+            <span class="cl-icon">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                </path>
+              </svg>
+            </span>
+            <div>
+              <span class="cl-label">GITHUB REPOSITORIES</span>
+              <span class="cl-value">github.com/YosriSecOps</span>
+            </div>
+          </a>
+          <div class="contact-link contact-link-tel">
+            <span class="cl-icon">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                </path>
+              </svg>
+            </span>
+            <div>
+              <span class="cl-label" data-i18n="contact.phone.label">TÉLÉPHONE &amp; WHATSAPP</span>
+              <span class="cl-value">
+                <a href="tel:+21692791769" class="tel-link">+216 92 791 769</a>
+                <span class="cl-sep">·</span>
+                <a href="https://wa.me/21692791769" target="_blank" rel="noopener" class="wa-link">WhatsApp ↗</a>
+              </span>
+            </div>
+          </div>
+
+          <!-- Download / Print CV Card -->
+          <div class="cv-download-card">
+            <div class="cv-card-info">
+
+              <span class="cv-title" data-i18n="contact.cv.title">MON CV</span>
+              <span class="cv-sub" data-i18n="contact.cv.sub">PDF · [N] page(s) · mis à jour en novembre 2026</span>
+            </div>
+            <a href="cv-yosri-hamdouni.pdf" class="btn-cv-print" id="btnDownloadCv" download>
+              <span class="btn-icon">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"
+                  style="display:inline-block; vertical-align:middle; margin-right:4px;">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </span> <span data-i18n="contact.cv.btn">Télécharger mon CV (PDF)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Encrypted Message Dispatcher Form -->
+        <div class="contact-terminal reveal">
+          <div class="terminal-bar">
+            <div class="term-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <span class="terminal-title">dispatch_message.sh</span>
+            <span class="term-status-badge" data-i18n="contact.response">Réponse sous 48 h</span>
+          </div>
+          <form class="contact-form" id="contactForm" action="https://formspree.io/f/xpppvzwr" method="POST">
+            <!-- Anti-spam Honeypot Field -->
+            <input type="text" name="_gotcha" class="form-honeypot" style="display:none !important;" tabindex="-1"
+              autocomplete="off" />
+
+            <div class="form-row">
+              <label for="cName" data-i18n="contact.form.name">Votre nom &amp; entreprise</label>
+              <input type="text" id="cName" name="name" placeholder="Ex: Jean Dupont (RSSI / Talent Partner)" data-i18n-ph="contact.form.name.ph"
+                required />
+            </div>
+            <div class="form-row">
+              <label for="cEmail" data-i18n="contact.form.email">Votre adresse email</label>
+              <input type="email" id="cEmail" name="email" placeholder="nom@entreprise.com" data-i18n-ph="contact.form.email.ph" required />
+            </div>
+            <div class="form-row">
+              <label for="cSubject" data-i18n="contact.form.subject">Objet de l'opportunité</label>
+              <input type="text" id="cSubject" name="subject" placeholder="Stage PFE 2027 / Mission d'Audit" data-i18n-ph="contact.form.subject.ph" required />
+            </div>
+            <div class="form-row">
+              <label for="cMessage" data-i18n="contact.form.message">Détails de la mission</label>
+              <textarea id="cMessage" name="message" rows="4"
+                placeholder="Bonjour Yosri, votre profil a retenu notre attention concernant un rôle en..." data-i18n-ph="contact.form.message.ph"
+                required></textarea>
+            </div>
+
+            <!-- Live Status Feedback Container -->
+            <div id="formStatus" class="form-status" aria-live="polite"></div>
+
+            <button type="submit" class="btn-primary" id="btnSubmitForm" aria-live="polite">
+              <span class="btn-text" data-i18n="contact.form.submit">Envoyer le message →</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+  </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner container">
+      <div class="footer-left">
+        <span class="prompt">&gt;</span> <strong>HAMDOUNI YOSRI</strong> · Cybersecurity Engineer &amp; Consultant ©
+        2026
+      </div>
+      <div class="footer-right">
+        <a href="#hero" class="back-to-top">
+          <span data-i18n="footer.top">RETOUR EN HAUT</span> <span class="arrow-up">↑</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
