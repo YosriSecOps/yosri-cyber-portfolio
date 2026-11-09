@@ -119,11 +119,11 @@
    THEME 2: LIGHT MODE — WARM IVORY × CHAMPAGNE × COPPER
    ═══════════════════════════════════════════════════════════ */
 [data-theme="light"] {
-  /* Background Media & Cinematic Scrim */
-  --bg-brightness: 0.95;
-  --scrim-left:    rgba(245, 240, 231, 0.88);
-  --scrim-mid:     rgba(245, 240, 231, 0.68);
-  --scrim-right:   rgba(245, 240, 231, 0.42);
+  /* Background Media & Cinematic Scrim (Keep dark cinematic video unchanged) */
+  --bg-brightness: 0.88;
+  --scrim-left:    rgba(20, 19, 17, 0.82);
+  --scrim-mid:     rgba(20, 19, 17, 0.50);
+  --scrim-right:   rgba(20, 19, 17, 0.28);
 
   /* Surfaces & Backgrounds */
   --bg-deep-navy:  #F5F0E7;
