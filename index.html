@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="fr">
 <html lang="fr" data-theme="dark">
 
 <head>
@@ -9,7 +8,9 @@
   <meta name="description"
     content="Portfolio cybersécurité de Yosri Hamdouni — Élève-ingénieur TEK-UP (3A), certifié ISO 27001 Lead Auditor, eCPPT v2, SC-200, Splunk & RHCE. Concepteur de CyberScore TN (ANCS) et Smart SOC. Expérience cinématique scroll-driven." />
   <meta name="author" content="Yosri Hamdouni" />
-  <meta name="theme-color" content="#030712" />
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛡️</text></svg>" />
+  <meta name="theme-color" content="#141311" />
 
   <!-- OpenGraph -->
   <meta property="og:title" content="Yosri Hamdouni · Cybersecurity Engineer & Consultant" />
@@ -27,7 +28,6 @@
   <!-- GSAP 3.12+ & Plugins -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
 
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -40,8 +40,8 @@
   ═══════════════════════════════════════════ -->
   <div class="video-background-container" aria-hidden="true">
     <div class="video-poster-fallback"></div>
-    <video id="bgVideo" class="bg-video-element" src="assets/website_smooth.mp4" poster="assets/poster.jpg" muted
-      playsinline preload="auto" loop></video>
+    <video id="bgVideo" class="bg-video-element" poster="assets/poster.jpg" muted playsinline webkit-playsinline
+      loop></video>
     <!-- Single Tunable Background Scrim -->
     <div class="bg-scrim"></div>
   </div>
@@ -244,16 +244,20 @@
               <div class="term-res">
                 <p class="res-highlight" data-i18n="hero.term.res">&gt; CYBERSECURITY ENGINEER IN THE MAKING</p>
                 <div class="res-list">
-                  <span class="res-item" data-i18n="hero.term.audit"><span class="chk-ok">[ OK ]</span> Audit &amp; Gouvernance (ISO 27001 Lead Auditor, RHCSA)</span>
-                  <span class="res-item" data-i18n="hero.term.offensive"><span class="chk-ok">[ OK ]</span> Sécurité Offensive (eCPPT v2, AD Pentest, Root Access)</span>
-                  <span class="res-item" data-i18n="hero.term.defense"><span class="chk-ok">[ OK ]</span> Défense SOC &amp; DFIR (Wazuh, Sentinel, SOAR &lt;10s)</span>
+                  <span class="res-item" data-i18n="hero.term.audit"><span class="chk-ok">[ OK ]</span> Audit &amp;
+                    Gouvernance (ISO 27001 Lead Auditor, RHCSA)</span>
+                  <span class="res-item" data-i18n="hero.term.offensive"><span class="chk-ok">[ OK ]</span> Sécurité
+                    Offensive (eCPPT v2, AD Pentest, Root Access)</span>
+                  <span class="res-item" data-i18n="hero.term.defense"><span class="chk-ok">[ OK ]</span> Défense SOC
+                    &amp; DFIR (Wazuh, Sentinel, SOAR &lt;10s)</span>
                 </div>
               </div>
               <div class="term-line"><span class="prompt">root@yosri:~$</span> <span class="cmd-text">status --target
                   pfe-2027</span></div>
               <div class="term-res">
                 <p class="res-meta" data-i18n="hero.term.pfe">&gt; Stage PFE 6 mois · Tunisie &amp; International</p>
-                <p class="res-meta text-cyan" data-i18n="hero.term.mobility">&gt; Mobilité active · Opérationnel immédiatement</p>
+                <p class="res-meta text-cyan" data-i18n="hero.term.mobility">&gt; Mobilité active · Opérationnel
+                  immédiatement</p>
                 <span class="cursor-underscore">_</span>
               </div>
             </div>
@@ -335,7 +339,8 @@
             </div>
             <div>
               <h3 class="certs-preview-title" data-i18n="certs.preview.title">Compétences certifiées</h3>
-              <p class="certs-preview-sub" data-i18n="certs.preview.sub">Des certifications reconnues pour une expertise solide</p>
+              <p class="certs-preview-sub" data-i18n="certs.preview.sub">Des certifications reconnues pour une expertise
+                solide</p>
             </div>
           </div>
           <a href="#certs" class="certs-preview-link">
@@ -431,7 +436,8 @@
 
       <div class="section-header reveal">
         <span class="section-tag" data-i18n="profil.tag">01 / 07 · PROFIL</span>
-        <h2 class="section-title" data-i18n="profil.title">La curiosité comme <span class="accent">première ligne de défense</span>.</h2>
+        <h2 class="section-title" data-i18n="profil.title">La curiosité comme <span class="accent">première ligne de
+            défense</span>.</h2>
       </div>
 
       <div class="profile-grid">
@@ -447,8 +453,10 @@
               <canvas id="radarCanvas" width="340" height="340"></canvas>
             </div>
             <div class="radar-footer">
-              <div class="radar-legend-item"><span class="legend-dot green"></span> <span data-i18n="profil.radar.legend1">Couverture Opérationnelle</span></div>
-              <div class="radar-legend-item"><span class="legend-dot cyan"></span> <span data-i18n="profil.radar.legend2">R&amp;D Offensive &amp; SOC</span></div>
+              <div class="radar-legend-item"><span class="legend-dot green"></span> <span
+                  data-i18n="profil.radar.legend1">Couverture Opérationnelle</span></div>
+              <div class="radar-legend-item"><span class="legend-dot cyan"></span> <span
+                  data-i18n="profil.radar.legend2">R&amp;D Offensive &amp; SOC</span></div>
             </div>
           </div>
         </div>
@@ -479,7 +487,8 @@
               <span class="pfe-chip" data-i18n="profil.pfe.chip">PROCHAIN CHAPITRE</span>
               <span class="pfe-period" data-i18n="profil.pfe.period">DÉBUT 2027 · 6 MOIS</span>
             </div>
-            <h4 class="pfe-title" data-i18n="profil.pfe.title">Stage de Fin d'Études (PFE conventionné) — Pré-embauche CDI</h4>
+            <h4 class="pfe-title" data-i18n="profil.pfe.title">Stage de Fin d'Études (PFE conventionné) — Pré-embauche
+              CDI</h4>
             <p class="pfe-desc" data-i18n="profil.pfe.desc">
               Périmètre ciblé : <strong>Consultant Cybersécurité / Ingénieur Sécurité</strong> (Audit des Risques, SOC
               &amp; Détection, ou Sécurité Offensive / Pentest).
@@ -489,7 +498,8 @@
 
           <!-- Language Badges -->
           <div class="badges-row reveal">
-            <span class="badge badge-accent" data-i18n="profil.badge.mobility">Mobilité : Tunisie &amp; International</span>
+            <span class="badge badge-accent" data-i18n="profil.badge.mobility">Mobilité : Tunisie &amp;
+              International</span>
             <span class="badge" data-i18n="profil.badge.fr"><strong>FR</strong> Français · C1 (Courant)</span>
             <span class="badge" data-i18n="profil.badge.en"><strong>EN</strong> Anglais · B2/C1 (Professionnel)</span>
             <span class="badge" data-i18n="profil.badge.ar"><strong>AR</strong> Arabe · Bilingue</span>
@@ -509,7 +519,8 @@
       <div class="section-header reveal">
         <span class="section-tag" data-i18n="certs.tag">02 / 07 · CERTIFICATIONS</span>
         <h2 class="section-title" data-i18n="certs.title">Compétences <span class="accent">certifiées</span>.</h2>
-        <p class="section-sub" data-i18n="certs.sub">Accréditations reconnues par l'industrie en gouvernance, analyse SOC, systèmes et pentest.</p>
+        <p class="section-sub" data-i18n="certs.sub">Accréditations reconnues par l'industrie en gouvernance, analyse
+          SOC, systèmes et pentest.</p>
       </div>
 
       <div class="certs-grid">
@@ -528,7 +539,8 @@
             </div>
             <h3 class="cert-name">ISO/IEC 27001</h3>
             <div class="cert-issuer">Lead Auditor</div>
-            <p class="cert-desc" data-i18n="cert.iso.desc">Audit SMSI, gouvernance ISO 27002 / 27005, exigences de conformité NIS 2 et DORA, restitution managériale C-Level.</p>
+            <p class="cert-desc" data-i18n="cert.iso.desc">Audit SMSI, gouvernance ISO 27002 / 27005, exigences de
+              conformité NIS 2 et DORA, restitution managériale C-Level.</p>
             <div class="cert-meta" data-i18n="cert.iso.meta">GOUVERNANCE &amp; SMSI</div>
           </div>
         </div>
@@ -550,7 +562,8 @@
             </div>
             <h3 class="cert-name">eCPPT v2</h3>
             <div class="cert-issuer">INE Security — Certified Professional Penetration Tester</div>
-            <p class="cert-desc" data-i18n="cert.ecppt.desc">Pentest réseau &amp; web avancé, pivoting complexe, exploitation Active Directory, buffer overflow et rapport professionnel.</p>
+            <p class="cert-desc" data-i18n="cert.ecppt.desc">Pentest réseau &amp; web avancé, pivoting complexe,
+              exploitation Active Directory, buffer overflow et rapport professionnel.</p>
             <div class="cert-meta" data-i18n="cert.ecppt.meta">SÉCURITÉ OFFENSIVE</div>
           </div>
         </div>
@@ -568,7 +581,8 @@
             </div>
             <h3 class="cert-name">Microsoft SC-200</h3>
             <div class="cert-issuer">Microsoft Security Operations Analyst</div>
-            <p class="cert-desc" data-i18n="cert.sc200.desc">Microsoft Sentinel SIEM/SOAR, Microsoft Defender XDR, requêtes de Threat Hunting KQL et réponse aux incidents cloud.</p>
+            <p class="cert-desc" data-i18n="cert.sc200.desc">Microsoft Sentinel SIEM/SOAR, Microsoft Defender XDR,
+              requêtes de Threat Hunting KQL et réponse aux incidents cloud.</p>
             <div class="cert-meta" data-i18n="cert.sc200.meta">SOC &amp; CLOUD SECURITY</div>
           </div>
         </div>
@@ -588,7 +602,8 @@
             </div>
             <h3 class="cert-name">Splunk Core</h3>
             <div class="cert-issuer">Certified Power User</div>
-            <p class="cert-desc" data-i18n="cert.splunk.desc">Recherche avancée SPL, création de tableaux de bord, modélisation de données, règles de corrélation et alertes de production.</p>
+            <p class="cert-desc" data-i18n="cert.splunk.desc">Recherche avancée SPL, création de tableaux de bord,
+              modélisation de données, règles de corrélation et alertes de production.</p>
             <div class="cert-meta" data-i18n="cert.splunk.meta">SIEM &amp; ANALYTICS</div>
           </div>
         </div>
@@ -608,7 +623,8 @@
             </div>
             <h3 class="cert-name">Red Hat RHCE &amp; RHCSA</h3>
             <div class="cert-issuer">Red Hat — Enterprise Linux 9</div>
-            <p class="cert-desc" data-i18n="cert.rhce.desc">Administration système avancée RHEL 9, automatisation Ansible, durcissement SELinux Enforcing, Firewalld DROP et stockage.</p>
+            <p class="cert-desc" data-i18n="cert.rhce.desc">Administration système avancée RHEL 9, automatisation
+              Ansible, durcissement SELinux Enforcing, Firewalld DROP et stockage.</p>
             <div class="cert-meta" data-i18n="cert.rhce.meta">LINUX HARDENING</div>
           </div>
         </div>
@@ -630,7 +646,8 @@
             </div>
             <h3 class="cert-name">Red Hat EX188</h3>
             <div class="cert-issuer">Red Hat Certified Specialist in Containers</div>
-            <p class="cert-desc" data-i18n="cert.ex188.desc">Déploiement et sécurisation de conteneurs Podman/Docker, gestion d'images durcies, volumes et architectures micro-services.</p>
+            <p class="cert-desc" data-i18n="cert.ex188.desc">Déploiement et sécurisation de conteneurs Podman/Docker,
+              gestion d'images durcies, volumes et architectures micro-services.</p>
             <div class="cert-meta" data-i18n="cert.ex188.meta">CONTAINERS &amp; DEVOPS</div>
           </div>
         </div>
@@ -650,7 +667,8 @@
             </div>
             <h3 class="cert-name">eJPT</h3>
             <div class="cert-issuer">INE — Junior Penetration Tester</div>
-            <p class="cert-desc" data-i18n="cert.ejpt.desc">Fondamentaux du test d'intrusion, cartographie réseau Nmap, analyse de vulnérabilités et exploitation pratique.</p>
+            <p class="cert-desc" data-i18n="cert.ejpt.desc">Fondamentaux du test d'intrusion, cartographie réseau Nmap,
+              analyse de vulnérabilités et exploitation pratique.</p>
             <div class="cert-meta" data-i18n="cert.ejpt.meta">ASSESSMENT PRATIQUE</div>
           </div>
         </div>
@@ -669,7 +687,8 @@
             </div>
             <h3 class="cert-name">PCAP — Python</h3>
             <div class="cert-issuer">Python Institute — Certified Associate in Python</div>
-            <p class="cert-desc" data-i18n="cert.pcap.desc">Développement d'outils de sécurité en Python, scripts réseau Scapy, multi-threading, intégration d'API et agents d'audit.</p>
+            <p class="cert-desc" data-i18n="cert.pcap.desc">Développement d'outils de sécurité en Python, scripts réseau
+              Scapy, multi-threading, intégration d'API et agents d'audit.</p>
             <div class="cert-meta" data-i18n="cert.pcap.meta">CYBERSCRIPTING &amp; AUTOMATION</div>
           </div>
         </div>
@@ -687,15 +706,18 @@
       <div class="section-header reveal">
         <span class="section-tag" data-i18n="projects.tag">03 / 07 · PROJETS</span>
         <h2 class="section-title" data-i18n="projects.title">Du code. <span class="accent">De l’impact</span>.</h2>
-        <p class="section-sub" data-i18n="projects.sub">Frameworks autonomes, pipelines SOC réactifs et environnements de tests offensifs.</p>
+        <p class="section-sub" data-i18n="projects.sub">Frameworks autonomes, pipelines SOC réactifs et environnements
+          de tests offensifs.</p>
       </div>
 
       <!-- Filter Tabs -->
       <div class="filter-tabs reveal" id="projectFilters">
         <button class="filter-tab active" data-filter="all" data-i18n="projects.filter.all">Tous (05)</button>
         <button class="filter-tab" data-filter="audit" data-i18n="projects.filter.audit">Audit &amp; Risques</button>
-        <button class="filter-tab" data-filter="defense" data-i18n="projects.filter.defense">Cyberdéfense &amp; SOC</button>
-        <button class="filter-tab" data-filter="offensive" data-i18n="projects.filter.offensive">Sécurité Offensive</button>
+        <button class="filter-tab" data-filter="defense" data-i18n="projects.filter.defense">Cyberdéfense &amp;
+          SOC</button>
+        <button class="filter-tab" data-filter="offensive" data-i18n="projects.filter.offensive">Sécurité
+          Offensive</button>
       </div>
 
       <div class="projects-grid">
@@ -814,7 +836,8 @@
               <span class="tech-tag">PowerShell</span>
             </div>
             <div class="project-links">
-              <span class="proj-link-disabled" data-i18n="p3.link.disabled">Simulation d’audit d’intrusion · Guide de durcissement rédigé</span>
+              <span class="proj-link-disabled" data-i18n="p3.link.disabled">Simulation d’audit d’intrusion · Guide de
+                durcissement rédigé</span>
             </div>
           </div>
         </div>
@@ -848,7 +871,8 @@
               <span class="tech-tag">Cartographie</span>
             </div>
             <div class="project-links">
-              <span class="proj-link-disabled" data-i18n="p4.link.disabled">Cas d’usage d’audit de conformité · Matrice de traitement des risques</span>
+              <span class="proj-link-disabled" data-i18n="p4.link.disabled">Cas d’usage d’audit de conformité · Matrice
+                de traitement des risques</span>
             </div>
           </div>
         </div>
@@ -904,8 +928,10 @@
 
       <div class="section-header reveal">
         <span class="section-tag" data-i18n="timeline.tag">04 / 07 · PARCOURS</span>
-        <h2 class="section-title" data-i18n="timeline.title">Missions d'ingénierie &amp; <span class="accent">expérience</span>.</h2>
-        <p class="section-sub" data-i18n="timeline.sub">Du terrain opérationnel en agence nationale aux audits d'infrastructures d'entreprises.</p>
+        <h2 class="section-title" data-i18n="timeline.title">Missions d'ingénierie &amp; <span
+            class="accent">expérience</span>.</h2>
+        <p class="section-sub" data-i18n="timeline.sub">Du terrain opérationnel en agence nationale aux audits
+          d'infrastructures d'entreprises.</p>
       </div>
 
       <div class="timeline">
@@ -923,12 +949,17 @@
               <span class="timeline-loc">Tunis, TN</span>
             </div>
             <h3 class="timeline-title" data-i18n="tl1.title">ANCS — Agence Nationale de la Cybersécurité</h3>
-            <p class="timeline-role" data-i18n="tl1.role">Ingénieur Consultant Stagiaire — Audit Cybersécurité, SOC &amp; R&amp;D Offensive</p>
+            <p class="timeline-role" data-i18n="tl1.role">Ingénieur Consultant Stagiaire — Audit Cybersécurité, SOC
+              &amp; R&amp;D Offensive</p>
 
             <ul class="timeline-bullets">
-              <li data-i18n="tl1.b1"><strong>Audit automatisé &amp; résilience des OIV (CyberScore TN) :</strong> Framework autonome d'évaluation de conformité (ISO 27001 / NIS 2) pour les Opérateurs d'Importance Vitale.</li>
-              <li data-i18n="tl1.b2"><strong>Validation PoC dynamique &amp; corrélation CVE :</strong> Détection des failles d'élévation et vérification assistée par LLM local souverain (Qwen2.5-Coder:7B via Ollama).</li>
-              <li data-i18n="tl1.b3"><strong>Déploiement durci &amp; scellement d'intégrité :</strong> Bastion conteneurisé durci sur RHEL 9.5 (SELinux Enforcing) et restitution de matrices de risques EBIOS RM.</li>
+              <li data-i18n="tl1.b1"><strong>Audit automatisé &amp; résilience des OIV (CyberScore TN) :</strong>
+                Framework autonome d'évaluation de conformité (ISO 27001 / NIS 2) pour les Opérateurs d'Importance
+                Vitale.</li>
+              <li data-i18n="tl1.b2"><strong>Validation PoC dynamique &amp; corrélation CVE :</strong> Détection des
+                failles d'élévation et vérification assistée par LLM local souverain (Qwen2.5-Coder:7B via Ollama).</li>
+              <li data-i18n="tl1.b3"><strong>Déploiement durci &amp; scellement d'intégrité :</strong> Bastion
+                conteneurisé durci sur RHEL 9.5 (SELinux Enforcing) et restitution de matrices de risques EBIOS RM.</li>
             </ul>
 
             <!-- KPI Chips Row -->
@@ -943,7 +974,7 @@
               </div>
               <div class="kpi-chip">
                 <span class="kpi-val">&gt;90 % de gain</span>
-                <span class="kpi-sub">vs [valeur à fournir par moi] en manuel</span>
+                <span class="kpi-sub">vs méthode manuelle</span>
               </div>
             </div>
 
@@ -974,11 +1005,18 @@
               <span class="timeline-loc">Tunis, TN</span>
             </div>
             <h3 class="timeline-title" data-i18n="tl2.title">OTD — Office des Terres Domaniales</h3>
-            <p class="timeline-role" data-i18n="tl2.role">Consultant Stagiaire — Audit Sécurité des SI, Active Directory &amp; SOC</p>
+            <p class="timeline-role" data-i18n="tl2.role">Consultant Stagiaire — Audit Sécurité des SI, Active Directory
+              &amp; SOC</p>
             <ul class="timeline-bullets">
-              <li data-i18n="tl2.b1"><strong>Audit technique &amp; conformité CIS Benchmarks :</strong> Audit de configuration sur plus de 30 équipements réseau Cisco et serveurs d'entreprise (Windows Server, RHEL) selon les benchmarks CIS/ANSSI ; réduction des surfaces d'attaque critiques.</li>
-              <li data-i18n="tl2.b2"><strong>Audit Active Directory &amp; chemins d'attaque :</strong> Cartographie approfondie des privilèges via PingCastle et BloodHound (détection de délégations abusives, comptes orphelins, faiblesses Kerberos) et préconisation du Tiering Model / LAPS.</li>
-              <li data-i18n="tl2.b3"><strong>Socle de surveillance SOC :</strong> Déploiement d'une sonde pilote SIEM Wazuh, corrélation des événements d'authentification suspects (Pass-the-Hash / brute-force) et présentation du rapport avec plan d'action à la DSI.</li>
+              <li data-i18n="tl2.b1"><strong>Audit technique &amp; conformité CIS Benchmarks :</strong> Audit de
+                configuration sur plus de 30 équipements réseau Cisco et serveurs d'entreprise (Windows Server, RHEL)
+                selon les benchmarks CIS/ANSSI ; réduction des surfaces d'attaque critiques.</li>
+              <li data-i18n="tl2.b2"><strong>Audit Active Directory &amp; chemins d'attaque :</strong> Cartographie
+                approfondie des privilèges via PingCastle et BloodHound (détection de délégations abusives, comptes
+                orphelins, faiblesses Kerberos) et préconisation du Tiering Model / LAPS.</li>
+              <li data-i18n="tl2.b3"><strong>Socle de surveillance SOC :</strong> Déploiement d'une sonde pilote SIEM
+                Wazuh, corrélation des événements d'authentification suspects (Pass-the-Hash / brute-force) et
+                présentation du rapport avec plan d'action à la DSI.</li>
             </ul>
           </div>
         </div>
@@ -996,10 +1034,14 @@
               <span class="timeline-loc">Tunis, TN</span>
             </div>
             <h3 class="timeline-title" data-i18n="tl3.title">Missions d'Audit &amp; Conseil Cyber Indépendant</h3>
-            <p class="timeline-role" data-i18n="tl3.role">Consultant Auditeur Cybersécurité Indépendant / Projets PME</p>
+            <p class="timeline-role" data-i18n="tl3.role">Consultant Auditeur Cybersécurité Indépendant / Projets PME
+            </p>
             <ul class="timeline-bullets">
-              <li data-i18n="tl3.b1">Réalisation de <strong>4 missions d'audit de sécurité et de conformité</strong> pour PME et startups : pré-audits ISO 27001, revues de configuration Cloud Azure, tests d'intrusion Web (OWASP Top 10).</li>
-              <li data-i18n="tl3.b2">Animation d'ateliers de restitution managériale auprès des dirigeants d'entreprise et RSSI.</li>
+              <li data-i18n="tl3.b1">Réalisation de <strong>4 missions d'audit de sécurité et de conformité</strong>
+                pour PME et startups : pré-audits ISO 27001, revues de configuration Cloud Azure, tests d'intrusion Web
+                (OWASP Top 10).</li>
+              <li data-i18n="tl3.b2">Animation d'ateliers de restitution managériale auprès des dirigeants d'entreprise
+                et RSSI.</li>
             </ul>
           </div>
         </div>
@@ -1019,8 +1061,12 @@
             <h3 class="timeline-title" data-i18n="tl4.title">Transmission Technique &amp; Leadership Pédagogique</h3>
             <p class="timeline-role" data-i18n="tl4.role">Fondateur Python Express &amp; Formateur GOMYCODE</p>
             <ul class="timeline-bullets">
-              <li data-i18n="tl4.b1"><strong>Python Express (Fondateur &amp; Formateur) :</strong> Direction d'une communauté technique de plus de <strong>100 apprenants</strong> ; élaboration de parcours pratiques en automatisation d'outils de sécurité, conception de labs cyber et mentorat personnalisé.</li>
-              <li data-i18n="tl4.b2"><strong>GOMYCODE (Formateur Microsoft Azure Cloud &amp; Automatisation) :</strong> Animation de modules sur l'architecture Cloud Azure, la gouvernance des identités (Entra ID) et l'automatisation d'administration sécurisée.</li>
+              <li data-i18n="tl4.b1"><strong>Python Express (Fondateur &amp; Formateur) :</strong> Direction d'une
+                communauté technique de plus de <strong>100 apprenants</strong> ; élaboration de parcours pratiques en
+                automatisation d'outils de sécurité, conception de labs cyber et mentorat personnalisé.</li>
+              <li data-i18n="tl4.b2"><strong>GOMYCODE (Formateur Microsoft Azure Cloud &amp; Automatisation) :</strong>
+                Animation de modules sur l'architecture Cloud Azure, la gouvernance des identités (Entra ID) et
+                l'automatisation d'administration sécurisée.</li>
             </ul>
           </div>
         </div>
@@ -1038,9 +1084,12 @@
             </div>
             <h3 class="timeline-title" data-i18n="tl5.title">Formation Académique d'Excellence</h3>
             <ul class="timeline-bullets">
-              <li data-i18n="tl5.b1"><strong>TEK-UP School of Engineering (2024 – Présent) :</strong> Diplôme d'Ingénieur en Cybersécurité &amp; Systèmes (3ᵉ année en cours).</li>
-              <li data-i18n="tl5.b2"><strong>IPEIN Nabeul (2022 – 2024) :</strong> Classes Préparatoires aux Concours Nationaux d'Ingénieurs (Filière Maths &amp; Physique - MP).</li>
-              <li data-i18n="tl5.b3"><strong>Lycée Secondaire de Bizerte (2021 – 2022) :</strong> Baccalauréat Scientifique (Section Mathématiques, Mention Très Bien).</li>
+              <li data-i18n="tl5.b1"><strong>TEK-UP School of Engineering (2024 – Présent) :</strong> Diplôme
+                d'Ingénieur en Cybersécurité &amp; Systèmes (3ᵉ année en cours).</li>
+              <li data-i18n="tl5.b2"><strong>IPEIN Nabeul (2022 – 2024) :</strong> Classes Préparatoires aux Concours
+                Nationaux d'Ingénieurs (Filière Maths &amp; Physique - MP).</li>
+              <li data-i18n="tl5.b3"><strong>Lycée Secondaire de Bizerte (2021 – 2022) :</strong> Baccalauréat
+                Scientifique (Section Mathématiques, Mention Très Bien).</li>
             </ul>
           </div>
         </div>
@@ -1057,16 +1106,21 @@
 
       <div class="section-header reveal">
         <span class="section-tag" data-i18n="skills.tag">05 / 07 · ARSENAL</span>
-        <h2 class="section-title" data-i18n="skills.title">Arsenal technique &amp; <span class="accent">méthodologique</span>.</h2>
-        <p class="section-sub" data-i18n="skills.sub">De la conformité réglementaire de haut niveau aux outils de détection et d'exploitation de bas niveau.</p>
+        <h2 class="section-title" data-i18n="skills.title">Arsenal technique &amp; <span
+            class="accent">méthodologique</span>.</h2>
+        <p class="section-sub" data-i18n="skills.sub">De la conformité réglementaire de haut niveau aux outils de
+          détection et d'exploitation de bas niveau.</p>
       </div>
 
       <!-- 3-Level Visual Legend -->
       <div class="skills-legend reveal">
-        <div class="legend-item"><span class="legend-badge lvl-cert"></span> <span class="legend-text" data-i18n="skills.legend.cert">Certifié</span>
+        <div class="legend-item"><span class="legend-badge lvl-cert"></span> <span class="legend-text"
+            data-i18n="skills.legend.cert">Certifié</span>
         </div>
-        <div class="legend-item"><span class="legend-badge lvl-proj"></span> <span class="legend-text" data-i18n="skills.legend.proj">Pratiqué en projet</span></div>
-        <div class="legend-item"><span class="legend-badge lvl-notion"></span> <span class="legend-text" data-i18n="skills.legend.notion">Notions</span>
+        <div class="legend-item"><span class="legend-badge lvl-proj"></span> <span class="legend-text"
+            data-i18n="skills.legend.proj">Pratiqué en projet</span></div>
+        <div class="legend-item"><span class="legend-badge lvl-notion"></span> <span class="legend-text"
+            data-i18n="skills.legend.notion">Notions</span>
         </div>
       </div>
 
@@ -1219,8 +1273,10 @@
 
       <div class="section-header reveal">
         <span class="section-tag" data-i18n="terminal.tag">06 / 07 · TERMINAL</span>
-        <h2 class="section-title" data-i18n="terminal.title">Explorez mon profil en <span class="accent">ligne de commande</span>.</h2>
-        <p class="section-sub" data-i18n="terminal.sub">Pas de scan intrusif. Pas de magie. Juste mon profil, version terminal interactive.</p>
+        <h2 class="section-title" data-i18n="terminal.title">Explorez mon profil en <span class="accent">ligne de
+            commande</span>.</h2>
+        <p class="section-sub" data-i18n="terminal.sub">Pas de scan intrusif. Pas de magie. Juste mon profil, version
+          terminal interactive.</p>
       </div>
 
       <div class="terminal-wrapper reveal">
@@ -1245,8 +1301,10 @@
    |_| \___/|____/|_| \_\___| |_| |_/_/   \_\_|  |_|____/ \___/ \___/|_| \_|___|
               </pre>
               <div class="ascii-title-bar">&gt; YOSRI HAMDOUNI &middot; SECOPS COMMAND SHELL</div>
-              <p class="term-welcome" data-i18n="terminal.welcome">Bienvenue sur le shell interactif de <strong>Yosri Hamdouni</strong>.</p>
-              <p class="term-hint" data-i18n="terminal.hint">Tapez <span class="cmd-pill">help</span> pour afficher la liste des commandes ou cliquez sur les suggestions ci-dessous :</p>
+              <p class="term-welcome" data-i18n="terminal.welcome">Bienvenue sur le shell interactif de <strong>Yosri
+                  Hamdouni</strong>.</p>
+              <p class="term-hint" data-i18n="terminal.hint">Tapez <span class="cmd-pill">help</span> pour afficher la
+                liste des commandes ou cliquez sur les suggestions ci-dessous :</p>
 
               <div class="quick-cmds">
                 <button class="quick-cmd-btn" data-cmd="whoami">whoami</button>
@@ -1281,7 +1339,8 @@
 
       <div class="section-header reveal">
         <span class="section-tag" data-i18n="contact.tag">07 / 07 · CONTACT</span>
-        <h2 class="section-title" data-i18n="contact.title">Une mission. <span class="accent">Un nouveau défi</span>.</h2>
+        <h2 class="section-title" data-i18n="contact.title">Une mission. <span class="accent">Un nouveau défi</span>.
+        </h2>
         <p class="section-sub" data-i18n="contact.sub">
           À la recherche d’un stage PFE de 6 mois à partir de début 2027 en tant que Consultant / Ingénieur
           Cybersécurité. Mobilité complète en Tunisie et à l'international.
@@ -1353,7 +1412,7 @@
             <div class="cv-card-info">
 
               <span class="cv-title" data-i18n="contact.cv.title">MON CV</span>
-              <span class="cv-sub" data-i18n="contact.cv.sub">PDF · [N] page(s) · mis à jour en novembre 2026</span>
+              <span class="cv-sub" data-i18n="contact.cv.sub">PDF · mis à jour en novembre 2026</span>
             </div>
             <a href="cv-yosri-hamdouni.pdf" class="btn-cv-print" id="btnDownloadCv" download>
               <span class="btn-icon">
@@ -1386,22 +1445,24 @@
 
             <div class="form-row">
               <label for="cName" data-i18n="contact.form.name">Votre nom &amp; entreprise</label>
-              <input type="text" id="cName" name="name" placeholder="Ex: Jean Dupont (RSSI / Talent Partner)" data-i18n-ph="contact.form.name.ph"
-                required />
+              <input type="text" id="cName" name="name" placeholder="Ex: Jean Dupont (RSSI / Talent Partner)"
+                data-i18n-ph="contact.form.name.ph" required />
             </div>
             <div class="form-row">
               <label for="cEmail" data-i18n="contact.form.email">Votre adresse email</label>
-              <input type="email" id="cEmail" name="email" placeholder="nom@entreprise.com" data-i18n-ph="contact.form.email.ph" required />
+              <input type="email" id="cEmail" name="email" placeholder="nom@entreprise.com"
+                data-i18n-ph="contact.form.email.ph" required />
             </div>
             <div class="form-row">
               <label for="cSubject" data-i18n="contact.form.subject">Objet de l'opportunité</label>
-              <input type="text" id="cSubject" name="subject" placeholder="Stage PFE 2027 / Mission d'Audit" data-i18n-ph="contact.form.subject.ph" required />
+              <input type="text" id="cSubject" name="subject" placeholder="Stage PFE 2027 / Mission d'Audit"
+                data-i18n-ph="contact.form.subject.ph" required />
             </div>
             <div class="form-row">
               <label for="cMessage" data-i18n="contact.form.message">Détails de la mission</label>
               <textarea id="cMessage" name="message" rows="4"
-                placeholder="Bonjour Yosri, votre profil a retenu notre attention concernant un rôle en..." data-i18n-ph="contact.form.message.ph"
-                required></textarea>
+                placeholder="Bonjour Yosri, votre profil a retenu notre attention concernant un rôle en..."
+                data-i18n-ph="contact.form.message.ph" required></textarea>
             </div>
 
             <!-- Live Status Feedback Container -->
@@ -1414,9 +1475,6 @@
         </div>
       </div>
     </div>
-  </section>
-  </div>
-  </div>
   </section>
 
   <!-- ═══════════════════════════════════════════
